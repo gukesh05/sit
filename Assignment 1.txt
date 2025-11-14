@@ -1,0 +1,18 @@
+Assignment 1
+
+
+
+import pandas as pd
+df=pd.read_csv("Heart.csv")
+df.shape
+df.isnull()
+//for summary 
+df.isnull.sum()
+df==0
+data["age"].mean()
+from sklearn.model_selection import train_test_split
+X=df[['trestbps','age','sex','restecg','chol']]
+y=df[['restecg','chol']]
+X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=10,test_size=0.25)
+X_train
+

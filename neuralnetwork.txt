@@ -1,0 +1,36 @@
+import math 
+import numpy as np 
+import pandas as pd 
+import tensorflow as tf 
+import matplotlib.pyplot as plt
+from tensorflow.keras import Model
+from tensorflow.keras import Sequential
+from tensorflow.keras.optimizers import Adamfrom sklearn.preprocessing import StandardScalerfrom sklearn.model_selection import train_test_splitfrom tensorflow.keras.losses import MeanSquaredLogarithmicError
+df = pd.read_csv("diabetes.csv")
+df
+
+print(df.head())
+X = df.drop('Outcome', axis=1)
+y = df['Outcome']
+from sklearn.model_selection import train_test_split
+X_train, X_temp, y_train, y_temp = train_test_split(X, y,
+test_size=0.2, random_state=42)
+X_test, X_val, y_test, y_val = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
+
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+X_val - scaler.transform(X_val)
+
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, Input
+model = Sequential([ 
+Input(shape=(8,)), 
+Dense(50, activation='relu'), 
+Dense(50, activation='relu'), 
+Dense(50, activation='relu'), 
+Dense(1, activation='sigmoid')])
+
+model.summary()
+Model: "sequential_2"
