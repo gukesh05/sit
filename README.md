@@ -33,3 +33,6 @@ IOT FILES
 [exp 01 - motor ^M distance.pdf](https://github.com/user-attachments/files/23554542/exp.01.-.motor.M.distance.pdf)
 
 [exp 1 blinking of led.pdf](https://github.com/user-attachments/files/23554541/exp.1.blinking.of.led.pdf)
+
+
+https://arduino.esp8266.com/stable/package_esp8266com_index.json
